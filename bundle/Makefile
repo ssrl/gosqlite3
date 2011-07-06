@@ -5,5 +5,5 @@ else
 	gcc -c sqlite3.c
 	ar cr ../libsqlite3.a sqlite3.o
 	ranlib ../libsqlite3.a
-	gcc -shared -Wl,-soname,libsqlite3.so.1 -o ../libsqlite3.so sqlite3.o
+	gcc -shared -Wl,-soname,libsqlite3.so -ldl -lpthread -o ../libsqlite3.so sqlite3.o
 endif
