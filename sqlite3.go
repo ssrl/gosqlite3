@@ -1,7 +1,7 @@
 package sqlite3
 
-// #cgo LDFLAGS: -lsqlite3
-// #include <sqlite3.h>
+// #cgo LDFLAGS:-L. -lsqlite3
+// #include "bundle/sqlite3.h"
 import "C"
 
 func Initialize() {
